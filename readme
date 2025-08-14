@@ -1,0 +1,17 @@
+Syringe Safety
+An AI-powered system that uses cameras and a custom-trained object detection model to identify syringes in real time. It monitors syringe usage during medical procedures and automatically logs syringe-related events, the system enhances accountability and helps prevent repeated misuse in clinical environments—supporting safer, more transparent healthcare practices.
+
+Final Idea: Cameras will be detecting syringes to make sure they are properly used and disposed of. Monitoring syringe usage during medical procedures, and logging the event. This system will prevent misuse of syringes and improve accountability in clinical environments. 
+
+The Algorithm
+The Syringe Safety system uses jetson orin nano and (SSD) with a ResNet backbone for real-time syringe detection. The model was trained using syringe images from the Open Images Dataset and exported in ONNX format for deployment. Development and training were done on an NVIDIA Jetson Orin Nano using Visual Studio Code. The model takes input images and outputs confidence scores and bounding boxes, enabling accurate and efficient detection of syringes in clinical environments.
+Running this project
+Model uses ResNet18 ONX format and training framework: PyTorch Deployment: NVIDIA Orin Nano. The Open Images dataset was used to train this model. Labels created to identify syringes. 
+The model receives an input image of syringe
+The image is processed and resized to match model input
+The model predicts a class label, detecting if it sees a syringe
+The label is displayed on the image
+
+Use this for inputing an image:
+ detectnet --model=models/syringemodel/ssd-mobilenet.onnx           --labels=models/syringemodel/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes "Input copy path"#and remove quotations #insert output in .jpg form
+
