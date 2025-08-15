@@ -15,3 +15,5 @@ The label is displayed on the image
 Use this for inputing an image:
  detectnet --model=models/syringemodel/ssd-mobilenet.onnx           --labels=models/syringemodel/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes "Input copy path"#and remove quotations #insert output in .jpg form
 
+Video Link:
+https://youtu.be/mGHoCVh26eg
