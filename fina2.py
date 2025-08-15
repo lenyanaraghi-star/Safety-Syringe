@@ -1,3 +1,8 @@
+#This code is for the model to detect a syringe live in a camera and not in an image and for that is not shown in the video demonstrating Safety Syringe model because I didn't have access to a syringe.
+
+
+
+
 #!/usr/bin/env python3
 import sys
 import argparse
